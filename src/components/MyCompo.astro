@@ -1,0 +1,10 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const {title} = Astro.props;
+// Fetch external data, even from a private API or database
+const usernameResponse = await fetch('http://localhost:4321/api/0.json');
+const usernameData = await usernameResponse.json();
+
+---
+<!-- Your template here! -->
+<p>{title} {usernameData.name}</p>

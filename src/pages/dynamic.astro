@@ -1,9 +1,12 @@
 ---
 export const prerender = false;
+const usernameResponse = await fetch('http://localhost:4321/api/0.json');
+const usernameData = await usernameResponse.json();
 ---
 
 <html>
 <body>
   test
+  <p>{usernameData.name}</p>
 </body>
 </html>

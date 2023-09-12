@@ -1,5 +1,6 @@
 ---
 import Layout from '../components/Layout.astro';
+import MyCompo from '../components/MyCompo.astro';
 import { getCollection } from 'astro:content';
 const blogEntries = await getCollection('blog');
 ---
@@ -43,5 +44,6 @@ const blogEntries = await getCollection('blog');
         </li>
       ))}
     </ul>
+    <MyCompo title="OH yeah!"/>
 	</main>
 </Layout>
