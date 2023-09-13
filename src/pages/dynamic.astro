@@ -1,28 +1,29 @@
 ---
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Layout from '../components/Layout.astro';
 import {EasyButton} from 'react-easy-button';
 export const prerender = false;
 const usernameResponse = await fetch('http://localhost:4321/api/0.json');
 const usernameData = await usernameResponse.json();
 ---
 
-<html>
-<body>
-  test
-  <p>{usernameData.name}</p>
-  <EasyButton label="Press me" client:load style={{color: "#242424", backgroundColor: "#fcfcfc"}} onClick="alert('toto')"></EasyButton>
-  <Tabs client:load>
-    <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
-    </TabList>
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-  </Tabs>
-</body>
-</html>
+<Layout title="Astro Quickstart">
+  <main>
+    test
+    <p>{usernameData.name}</p>
+    <EasyButton label="Press me" client:load style={{color: "#242424", backgroundColor: "#fcfcfc"}} onClick="alert('toto')"></EasyButton>
+    <Tabs client:load>
+      <TabList>
+        <Tab>Title 1</Tab>
+        <Tab>Title 2</Tab>
+      </TabList>
+      <TabPanel>
+        <h2>Any content 1</h2>
+      </TabPanel>
+      <TabPanel>
+        <h2>Any content 2</h2>
+      </TabPanel>
+    </Tabs>
+  </main>
+</Layout>
