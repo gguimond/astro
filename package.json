@@ -11,5 +11,14 @@
   "devDependencies": {
     "@astrojs/node": "^6.0.0",
     "astro": "^3.0.10"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.2",
+    "chartify": "^3.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-easy-button": "^1.0.15",
+    "react-tabs": "^6.0.2",
+    "use-debounce": "^9.0.4"
   }
 }
